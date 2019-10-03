@@ -5,7 +5,7 @@ Multi-Script Text Identification
 ================================
 This project done as part of the course CSN 382 Machine Learning uses Transfer Learning technique by retraining Inception V3 model trained on Imagenet dataset.
 
-##Files in this directory
+## Files in this directory
 
 #### 1. retrain.py - Code to retrain the classification layers of the
 ####    Inception V3 model
