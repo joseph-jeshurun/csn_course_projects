@@ -18,3 +18,5 @@ This project done as part of the course CSN 382 Machine Learning uses Transfer L
 ####    hyperparameters and weights for the trained model
 #### 7. accuracy_score.py - Code to measure how much percentage of validation
 ####    data is predicted correctly by the retrained model
+
+
