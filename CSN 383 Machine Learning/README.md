@@ -20,3 +20,30 @@ This project done as part of the course CSN 382 Machine Learning uses Transfer L
 ####    data is predicted correctly by the retrained model
 
 
+## Commands
+
+#### 1. Execute the below code in terminal in order to **retrain** the model
+```python
+python retrain.py --image_dir ../tensorflow/tensorflow/examples/image_retraining/language_photos
+```
+"../tensorflow/tensorflow/examples/image_retraining/language_photos" directory contains 7 folders with images belonging to 7 different labels
+
+*After retraining the model 'output_graph.pb' file having the weights and hyperparameters of the model along with other files is saved in "/tmp" directory of the machine on which it is being trained. These files are copied to the current directory in order to run the below code.*
+
+#### 2. Execute the below code in terminal to **test** the model on validation set of images
+```python
+python predict.py \
+--graph=../tensorflow/tensorflow/examples/image_retraining/tm/output_graph.pb --labels=../tensorflow/tensorflow/examples/image_retraining/tm/output_labels.txt \
+--input_layer=Placeholder \
+--output_layer=final_result \
+--image=../tensorflow/tensorflow/examples/image_retraining/testing_images/word_1.png
+```
+
+#### 3. Execute the below code in terminal to test the model on a single image file
+```python
+python predict_one_image.py \
+--graph=../tensorflow/tensorflow/examples/image_retraining/tm/output_graph.pb --labels=../tensorflow/tensorflow/examples/image_retraining/tm/output_labels.txt \
+--input_layer=Placeholder \
+--output_layer=final_result \
+--image=../tensorflow/tensorflow/examples/image_retraining/testing_images/word_1.png
+```
